@@ -1,0 +1,48 @@
+:root {
+  --color-light: #ffffff;
+  --color-black: #000000;
+  --color-red: #fA2828;
+  --color-gray: #c4c4c4;
+  --color-orange: #ff5252;
+  --color-dark-gray: #988f8f;
+  --color-tundora: #4d4747;
+  --color-mercury: #e5e5e5;
+  --color-mine-shaft: #363232;
+  
+}
+
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1060px) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1280px) {
+    @content
+  }
+}
+
+@mixin font($name, $weight) {
+  @font-face {
+    font: {
+      family: $name;
+      weight: $weight;
+      display: swap;
+    }
+    src: url("@/assets/fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+        url("@/assets/fonts/#{ $name }-#{ $weight }.woff") format("woff");
+  }
+}
