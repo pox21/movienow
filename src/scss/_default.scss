@@ -4,7 +4,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: var(--color-light);
-  background-color: var(--color-tundora);
+  background-color: var(--color-mine-shaft);
 }
 
 .scroll-off {
@@ -82,4 +82,9 @@ a {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+.color-gray {
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
 }

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1 class="header__title">
-      <a href=""> #movienow </a>
+      <router-link to="/"> #movienow </router-link>
     </h1>
   </header>
 </template>
@@ -13,6 +13,7 @@ export default {};
 .header {
   padding: 36px 0 16px;
   background-color: var(--color-red);
+  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.28);
 
   &__title {
     margin: 0;
