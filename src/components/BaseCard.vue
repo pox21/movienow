@@ -8,8 +8,8 @@
         <router-link
           class="card__link"
           :to="{ name: 'film', params: { id: item.id } }"
+          v-html="item.title" 
         >
-          {{ item.title }}
         </router-link>
       </h3>
       <p class="card__info">
@@ -32,7 +32,7 @@
         {{ item.description }}
       </p>
     </div>
-    <time class="card__time" v-if="item.collapse && item.collapse.duration">
+    <div class="card__time" v-if="item.collapse && item.collapse.duration">
       <!-- <span>142 мин / 02:22:00</span> -->
       <span> {{ item.collapse.duration.join('').replace('.', '') }}</span>
       <svg
@@ -48,7 +48,7 @@
           fill-opacity="0.98"
         />
       </svg>
-    </time>
+    </div>
   </article>
 </template>
 
