@@ -8,8 +8,8 @@
         <router-link
           class="card__link"
           :to="{ name: 'film', params: { id: item.id } }"
-          v-html="item.title" 
         >
+          <span v-html="item.title"></span>
         </router-link>
       </h3>
       <p class="card__info">
