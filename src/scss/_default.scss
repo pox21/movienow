@@ -1,4 +1,6 @@
 body {
+  overflow: hidden;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   line-height: 100%;
   font-weight: 400;
@@ -7,8 +9,9 @@ body {
   background-color: var(--color-mine-shaft);
 }
 
-.scroll-off {
-  overflow: hidden; 
+.site-wrapper {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 *, *::before, *::after {
@@ -87,4 +90,18 @@ a {
 .color-gray {
   text-transform: uppercase;
   color: var(--color-dark-gray);
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 12px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  overflow-y: auto;
 }

@@ -16,7 +16,7 @@
 export default {
   props: {
     input: Object,
-    modelValue: String
+    modelValue: Number
   }
 };
 </script>

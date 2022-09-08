@@ -1,5 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 import FilmsPage from '@/views/FilmsPage.vue';
+import FilmPage from '@/views/FilmPage.vue';
+import NotFound from '@/views/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,14 +12,16 @@ const router = createRouter({
       component: FilmsPage
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/:id',
+      name: 'film',
+      component: FilmPage
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: NotFound
     }
   ]
 });
 
-export default router
+export default router;
